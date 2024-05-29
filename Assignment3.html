@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neat Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .overlay-text {
+            color: #fff;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1507643179773-3e975d7ac515?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FsbGVyeXxlbnwwfHwwfHx8MA%3D%3D" alt="Image 1">
+            <div class="overlay">
+                <div class="overlay-text">View</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1608371945786-d47d3cdd31da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGdhbGxlcnl8ZW58MHx8MHx8fDA%3D" alt="Image 2">
+            <div class="overlay">
+                <div class="overlay-text">View</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.liverpoolmuseums.org.uk/styles/dynamic_medium/public/2021-08/Lady-Lever-Art-Gallery-schools-thumbnail-pete-carr.jpg" alt="Image 3">
+            <div class="overlay">
+                <div class="overlay-text">View</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://home.iitd.ac.in/images/gallery/gallery-lg1.jpg" alt="Image 3">
+            <div class="overlay">
+                <div class="overlay-text">View</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThr3ngGbm6vyTohVWPRas6rLWNoMl9ND4_gQ&s" alt="Image 3">
+            <div class="overlay">
+                <div class="overlay-text">View</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1606819717115-9159c900370b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2FsbGVyeXxlbnwwfHwwfHx8MA%3D%3D" alt="Image 3">
+            <div class="overlay">
+                <div class="overlay-text">View</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
